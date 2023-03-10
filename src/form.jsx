@@ -87,30 +87,38 @@ export default function DummyForm () {
             {submit? <Results/> :
             <Card className="card">
             <div>
-                <h1> 
-                    Location
-                </h1>
-                <TextField
-                    value={location}
-                    onChange={handleLocationChange}
-                    className="textfield"
-                    id="location"
-                    required
-                    label="location"
-                />
+                <div>
+                    <div className="field_title">
+                        <h1> 
+                            Location
+                        </h1>
+                        <TextField
+                            value={location}
+                            onChange={handleLocationChange}
+                            className="textfield"
+                            id="location"
+                            required
+                            label="location"
+                         />
+                    </div>
+                </div>
             </div>
             <div>
-                <h1>
-                    Name
-                </h1>
-                <TextField
-                    value={name}
-                    onChange={handleNameChange}
-                    className="textfield"
-                    id="name"
-                    required
-                    label="name"
-                />
+                <div>
+                    <div className="field_title">
+                        <h1>
+                            Name
+                        </h1>
+                        <TextField
+                            value={name}
+                            onChange={handleNameChange}
+                            className="textfield"
+                            id="name"
+                            required
+                            label="name"
+                        />
+                    </div>
+                </div>
             </div>
             <div>
                 <h1> 
@@ -120,72 +128,95 @@ export default function DummyForm () {
                     {/* freezer list */}
             </div>
             <div>
-                <h1> 
-                    Refrigeration
-                </h1>
-                <TextField
-                    value={fridge1Temp}
-                    onChange={handleFridge1TempChange}
-                    className="textfield"
-                    id="fridgeid1"
-                    required
-                    label="Temperature"
-                />
-                <TextField
-                    value={fridge2Temp}
-                    onChange={handleFridge2TempChange}
-                    className="textfield"
-                    id="fridgeid2"
-                    required
-                    label="Temperature"
-                />
+                <div>
+                    <div className="sensor_temperature_name">
+                        <h1>  
+                            Refrigeration
+                        </h1>
+                        <TextField
+                            value={fridge1Temp}
+                            onChange={handleFridge1TempChange}
+                            className="textfield"
+                            id="fridgeid1"
+                            required
+                            label="Temperature"
+                        />
+                    </div>
                 </div>
-            <div>
-                <h1>
-                    Cold Beverage Equipment
-                </h1>
-                <div></div>
-                <TextField
-                    value={javaTemperature}
-                    onChange={handleJavaTempChange}
-                    className="textfield"
-                    id="javamix"
-                    required
-                    label="Java Mix Temperature"
-                />
-                <TextField
-                    value={baseTemperature}
-                    onChange={handleBaseChange}
-                    className="textfield"
-                    id="neutralbase"
-                    required
-                    label="Base Temperature"
-                />
-                <Button
-                    id="frozen-beverage-yes"
-                    onClick={(e) => {setFrozenBeverage('yes')}}
-                >
-                    Yes
-                </Button>
-                <Button
-                    id="frozen-beverage-no"
-                    onClick={(e) => {setFrozenBeverage('no')}}
-                    >
-                    No
-                </Button>
             </div>
             <div>
-                <h1>
-                    Dairy Dispensers
-                </h1>
-                <TextField
-                    value={dairyTemp}
-                    onChange={handleDairyTempChange}
-                    className="textfield"
-                    id="dairy-dispensers-frontcounter-1"
-                    label="Temperature"
-                    required
-                />
+                <div>
+                    <div className="sensor_temperature_name">
+                        <TextField
+                            value={fridge2Temp}
+                            onChange={handleFridge2TempChange}
+                            className="textfield"
+                            id="fridgeid2"
+                            required
+                            label="Temperature"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div>  
+                <div>
+                    <div className="field_title">
+                        <h1>
+                            Cold Beverage Equipment
+                        </h1>
+                        <TextField
+                            value={javaTemperature}
+                            onChange={handleJavaTempChange}
+                            className="textfield"
+                            id="javamix"
+                            required
+                            label="Java Mix Temperature"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div className="field_title">
+                        <TextField
+                            value={baseTemperature}
+                            onChange={handleBaseChange}
+                            className="textfield"
+                            id="neutralbase"
+                            required
+                            label="Base Temperature"
+                        />
+                        <Button
+                            id="frozen-beverage-yes"
+                            onClick={(e) => {setFrozenBeverage('yes')}}
+                        >
+                            Yes
+                        </Button>
+                        <Button
+                            id="frozen-beverage-no"
+                            onClick={(e) => {setFrozenBeverage('no')}}
+                            >
+                            No
+                        </Button>
+                    </div>    
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div className="sensor_temperature_name">
+                        <h1>
+                            Dairy Dispensers
+                        </h1>
+                        <TextField
+                            value={dairyTemp}
+                            onChange={handleDairyTempChange}
+                            className="textfield"
+                            id="dairy-dispensers-frontcounter-1"
+                            label="Temperature"
+                            required
+                        />
+                    </div>
+                </div>
             </div>
             <Button
                 id="form-submit"
