@@ -186,6 +186,12 @@ export default function DummyForm () {
                             required
                             label="Base Temperature"
                         />
+                    </div>    
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div className="yesno_buttons">
                         <Button
                             id="frozen-beverage-yes"
                             onClick={(e) => {setFrozenBeverage('yes')}}
@@ -198,7 +204,7 @@ export default function DummyForm () {
                             >
                             No
                         </Button>
-                    </div>    
+                    </div>
                 </div>
             </div>
             <div>
@@ -210,7 +216,7 @@ export default function DummyForm () {
                         <TextField
                             value={dairyTemp}
                             onChange={handleDairyTempChange}
-                            className="textfield"
+                                className="textfield"
                             id="dairy-dispensers-frontcounter-1"
                             label="Temperature"
                             required
@@ -218,14 +224,16 @@ export default function DummyForm () {
                     </div>
                 </div>
             </div>
-            <Button
-                id="form-submit"
-                onClick={(e) => {setSubmit(true)}}
-                type="submit"
-                variant="contained"
-            >
-                Submit
-            </Button>
+            <div className="submit_form">
+                <Button
+                    id="form-submit"
+                    onClick={(e) => {setSubmit(true)}}
+                    type="submit"
+                    variant="contained"
+                >
+                    Submit
+                </Button>
+            </div>
         </Card> }
         </div>
     );
